@@ -1,0 +1,21 @@
+{
+	"name":             "ntopulos/formulator-devkit",
+    "description":      "Development kit for Formulator.",
+    "authors": [
+        {
+            "name": "Nikos Topulos",
+            "email": "nt@uptn.net"
+        }
+    ],
+    "license":          "MIT",
+    "homepage":         "https://github.com/ntopulos/formulator-devkit",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ntopulos/formulator"
+        }
+    ],
+    "require": {
+        "ntopulos/formulator": "dev-master"
+    }
+}
