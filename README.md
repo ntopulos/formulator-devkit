@@ -7,5 +7,5 @@ Provides everything to try [Formulator](http://ntopulos.github.io/formulator/ind
 
 1. Clone the repository or [download it](https://github.com/ntopulos/formulator-devkit/archive/master.zip).
 2. Use [Composer](https://getcomposer.org/) by typing ```composer install``` in your terminal.
-3. To test the automatic generation, you will need to provide the access to your database in ```ressources/config.php```.
+3. To test the automatic generation, you need to provide the access to your database in ```ressources/config.php```.
 4. You can import a ready to run MySQL database from ```ressources/db.sql```.
