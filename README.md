@@ -2,6 +2,7 @@
 
 Provides everything to try [Formulator](http://ntopulos.github.io/formulator/index.html) out of the box.
 
+![Devkit screenshot](http://ntopulos.github.io/formulator/img/devkit.png)
 
 ## Installation
 
