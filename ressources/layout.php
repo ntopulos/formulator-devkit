@@ -18,7 +18,7 @@
         h1 {
             font-weight: normal;
         }
-        .formulator_debug {
+        .code {
             width: 50%;
             float: left;
             margin: 0;
@@ -26,9 +26,24 @@
             height: 108%;
             overflow-y: scroll;
         }
-            .formulator_debug pre {
+            .code pre {
                 margin: 0 !important;
                 font-size: 0.9em;
+
+                /*taken from formulator.php*/
+                margin: 0;
+                padding: 20px;
+                line-height: 0.6em;
+                background-color: #333;
+                color: #ccc;
+                margin-bottom: 2em;
+            }
+            .code h1 {
+                /*taken from formulator.php*/
+                margin: 0;
+                padding: 20px;
+                background-color: #272727;
+                color: #fff
             }
         .formulator_form {
             width: 47%;
@@ -96,15 +111,9 @@
             <? foreach ($nav as $page): ?><li<?= ($current_page == $page ? ' class="current"' : '') ?>><a href="?page=<?= $page ?>"><?= $page ?></a></li><? endforeach; ?>
             </ul>
         </nav>
-        <?
-        echo $content;
-
-        // time
-        $time_end = microtime(true);
-        //dividing with 60 will give the execution time in minutes other wise seconds
-        $execution_time = ($time_end - $time_start);
-        //execution time of the script
-        echo '<p style="position: absolute; top:0; right: 10%;">Execution Time: '.round($execution_time,4).' seconds Memory usage: '.round(memory_get_peak_usage()/10E6,4).' MB</p>';
-        ?>
+        <div class="code"><h1>Code</h1><pre><?= $code ?></pre></div>
+        <?= $content; ?>
+        <p style="position: absolute; top:0; right: 10%;">Execution Time: <?= round((microtime(true) - $time_start),4); ?> seconds Memory usage: <?= round(memory_get_peak_usage()/10E6,4) ?> MB</p>
+        
     </body>
 </html>
