@@ -26,11 +26,7 @@ foreach($folder as $key => $file) {
 $nav = $folder;
 
 // Current page
-if (isset($_GET['page'])) {
-    $current_page = $_GET['page'];
-} else {
-    $current_page = 'index.php';
-}
+$current_page = (isset($_GET['page']) ? $_GET['page'] : 'index.php');
 
 
 // Rendering
@@ -38,8 +34,11 @@ ob_start();
 require $dir.'/'.$current_page;
 $content = ob_get_clean();
 
-$code = nl2br(file_get_contents($dir.'/'.$current_page));
+// source
 
+$source = file_get_contents($dir.'/'.$current_page);
+$source = str_replace('<?php', '', $source);
+$source = str_replace('?>;', '', $source);
 // Into buffer
 ob_start();
 require 'ressources/layout.php';

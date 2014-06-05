@@ -20,18 +20,12 @@ $stmt->execute();
 /* ---------- Formulator ---------- */
 
 $formulator = new ntopulos\formulator\Formulator();
-//$formulator->debug_mod = true;
 $formulator->auto_placeholders = true;
 
 
 // 1. adding and managing elements
 
-$options = array();
-$options['all_data_types']['type_varchar']['attributes'] = array('style' => 'background: red');
-$options['all_data_types']['type_varchar']['type'] = 'InputDate';
-//$options['all_data_types']['type_varchar']['ignore'] = true;
-
-$formulator->addElementsAdvanced($stmt, $dbh, $options);
+$formulator->addElementsAdvanced($stmt, $dbh);
 
 
 // 2. Computation

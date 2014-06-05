@@ -18,7 +18,6 @@ $result = $mysqli->query($query);
 /* ---------- Formulator ---------- */
 
 $formulator = new ntopulos\formulator\Formulator();
-//$formulator->debug_mod = true;
 $formulator->auto_placeholders = true;
 
 

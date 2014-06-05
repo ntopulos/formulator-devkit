@@ -11,7 +11,6 @@ $time_start = microtime(true);
 /* ---------- Formulator ---------- */
 
 $formulator = new ntopulos\formulator\Formulator();
-//$formulator->debug_mod = true;
 $formulator->rows = 3;
 
 

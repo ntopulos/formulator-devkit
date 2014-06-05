@@ -22,7 +22,6 @@ while ($row = $result->fetch_assoc()) {
 /* ---------- Formulator ---------- */
 
 $formulator = new ntopulos\formulator\Formulator();
-//$formulator->debug_mod = true;
 $formulator->auto_placeholders = true;
 
 
