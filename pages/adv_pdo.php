@@ -20,7 +20,7 @@ $stmt->execute();
 /* ---------- Formulator ---------- */
 
 $formulator = new ntopulos\formulator\Formulator();
-$formulator->debug_mod = true;
+//$formulator->debug_mod = true;
 $formulator->auto_placeholders = true;
 
 

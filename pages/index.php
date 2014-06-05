@@ -11,13 +11,13 @@ $time_start = microtime(true);
 /* ---------- Formulator ---------- */
 
 $formulator = new ntopulos\formulator\Formulator();
-$formulator->debug_mod = true;
+//$formulator->debug_mod = true;
 
 
 // 1. adding and managing elements
 
 $formulator->addElement('name');
-$formulator->elements->root->name->addRule('required')->addRule('between:10,20');
+$formulator->elements->root->name->addRule('required');
 
 $formulator->addElement('age');
 $formulator->elements->root->age->label = 'Your age';

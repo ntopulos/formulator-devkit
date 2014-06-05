@@ -38,6 +38,8 @@ ob_start();
 require $dir.'/'.$current_page;
 $content = ob_get_clean();
 
+$code = nl2br(file_get_contents($dir.'/'.$current_page));
+
 // Into buffer
 ob_start();
 require 'ressources/layout.php';
